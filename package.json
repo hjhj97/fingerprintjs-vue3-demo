@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fingerprintjs/fingerprintjs": "^4.5.1",
     "@fingerprintjs/fingerprintjs-pro-vue-v3": "^1.5.0",
     "vue": "^3.5.13"
   },
