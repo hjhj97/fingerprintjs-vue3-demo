@@ -9,7 +9,7 @@
 
 <script setup lang="ts">
 const props = defineProps<{
-  data: Record<string, any>;
+  data: Object;
 }>();
 </script>
 

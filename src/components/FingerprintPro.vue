@@ -3,7 +3,7 @@
     <h1>FingerprintPro</h1>
     <div v-if="isLoading">Loading...</div>
     <div v-else-if="error">Error: {{ error }}</div>
-    <ObjectFormatter v-else :data="data" />
+    <ObjectFormatter v-else-if="data" :data="data" />
   </div>
 </template>
 
