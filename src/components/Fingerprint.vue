@@ -1,7 +1,7 @@
 <template>
   <section class="container">
-    <FingerprintPro />
-    <FingerprintJS />
+    <FingerprintPro class="item" />
+    <FingerprintJS class="item" />
   </section>
 </template>
 
@@ -13,5 +13,8 @@ import FingerprintJS from "@/components/FingerprintJS.vue";
 .container {
   display: flex;
   gap: 20px;
+}
+.item {
+  flex: 1;
 }
 </style>

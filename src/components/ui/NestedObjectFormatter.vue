@@ -1,8 +1,9 @@
 <template>
   <div class="data">
     <div v-for="(value, key) in props.data" :key="key" class="data-item">
-      <span class="data-key">{{ key }}:</span>
-      <span class="data-value">{{ value }}</span>
+      <span class="data-key">{{ key }}</span>
+      <NestedObjectFormatter v-if="isObject(value)" :data="value" />
+      <span v-else class="data-value">{{ value }}</span>
     </div>
   </div>
 </template>
@@ -11,6 +12,9 @@
 const props = defineProps<{
   data: Object;
 }>();
+const isObject = (value: Object) => {
+  return typeof value === "object";
+};
 </script>
 
 <style scoped>
@@ -30,11 +34,15 @@ const props = defineProps<{
 }
 
 .data-key {
-  font-weight: bold;
+  font-weight: 900;
+  font-size: 18px;
+  font-family: monospace;
   margin-right: 8px;
 }
 
 .data-value {
   word-break: break-all;
+  font-family: monospace;
+  color: #888;
 }
 </style>
